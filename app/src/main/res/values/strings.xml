@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">trabajoAndroid</string>
+    <string name="ImageDescription">Laptop</string>
+    <string name="txtCode">Código</string>
+    <string name="txtDescription">Descripción</string>
+    <string name="txtMarcaRamAlmacenamiento">Marca / RAM / Almacenamiento</string>
+    <string name="txtMarca">Marca</string>
+    <string name="txtMemoriaRam">Memoria Ram</string>
+    <string name="txtTamañoAlmacenamiento">Tamaño de almacenamiento</string>
+    <string name="txtPrecio">Precio</string>
+    <string name="txtPlateado">Plateado</string>
+    <string name="txtNegro">Negro</string>
+    <string name="txtRegistrarLaptop">Registrar Laptop</string>
+    <string name="txtListaLaptops">Lista de laptops</string>
 </resources>

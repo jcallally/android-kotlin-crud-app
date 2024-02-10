@@ -6,162 +6,173 @@
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageview_laptop"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:src="@drawable/laptop_image_negro"
-            android:scaleType="centerCrop"/>
-
-        <EditText
-            android:id="@+id/edittext_cod"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Código"
-            android:background="@drawable/edittext_custom_gray"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:padding="15dp"
-            android:maxLines="1"
-            android:inputType="text"/>
-
-        <EditText
-            android:id="@+id/edittext_descripcion"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Descripción"
-            android:background="@drawable/edittext_custom_gray"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:padding="15dp"
-            android:maxLines="2"
-            android:inputType="text"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Marca / RAM / Almacenamiento"
-            android:textStyle="bold"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"/>
-
-        <Spinner
-            android:id="@+id/spinner_marca"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:contentDescription="Marca"
-            android:minWidth="100dp"
-            android:minHeight="48dp"/>
+            android:orientation="vertical">
 
-        <Spinner
-            android:id="@+id/spinner_ram"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:contentDescription="Memoria Ram"
-            android:minWidth="100dp"
-            android:minHeight="48dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-        <Spinner
-            android:id="@+id/spinner_almacenamiento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:contentDescription="Tamaño de almacenamiento"
-            android:minWidth="100dp"
-            android:minHeight="48dp"/>
+                <ImageView
+                    android:id="@+id/imageview_laptop"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:src="@drawable/laptop_image_negro"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/ImageDescription"/>
 
-        <EditText
-            android:id="@+id/edittext_precio"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Precio"
-            android:background="@drawable/edittext_custom_gray"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:padding="15dp"
-            android:maxLines="1"
-            android:inputType="phone"/>
+                <EditText
+                    android:id="@+id/edittext_cod"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="@string/txtCode"
+                    android:autofillHints="generatedCode"
+                    android:background="@drawable/edittext_custom_gray"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="15dp"
+                    android:maxLines="1"
+                    android:inputType="text"/>
 
-        <RadioGroup
-            android:id="@+id/radiogroup_color"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp">
+                <EditText
+                    android:id="@+id/edittext_descripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="@string/txtDescription"
+                    android:autofillHints="productDescription"
+                    android:background="@drawable/edittext_custom_gray"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="15dp"
+                    android:maxLines="2"
+                    android:inputType="text"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txtMarcaRamAlmacenamiento"
+                    android:textStyle="bold"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_marca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="@string/txtMarca"
+                    android:minWidth="100dp"
+                    android:minHeight="48dp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_ram"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="@string/txtMemoriaRam"
+                    android:minWidth="100dp"
+                    android:minHeight="48dp"/>
+
+                <Spinner
+                    android:id="@+id/spinner_almacenamiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:contentDescription="@string/txtTamañoAlmacenamiento"
+                    android:minWidth="100dp"
+                    android:minHeight="48dp"/>
+
+                <EditText
+                    android:id="@+id/edittext_precio"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="@string/txtPrecio"
+                    android:autofillHints="productPrice"
+                    android:background="@drawable/edittext_custom_gray"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:padding="15dp"
+                    android:maxLines="1"
+                    android:inputType="phone"/>
+
+                <RadioGroup
+                    android:id="@+id/radiogroup_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp">
+
+                    <RadioButton
+                        android:id="@+id/radiobutton_plateado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtPlateado"/>
+
+                    <RadioButton
+                        android:id="@+id/radiobutton_negro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/txtNegro"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_gravity="bottom"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="center">
 
-                <RadioButton
-                    android:id="@+id/radiobutton_plateado"
-                    android:layout_width="wrap_content"
+                <Button
+                    android:id="@+id/btn_registrar"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Plateado"/>
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button"
+                    android:padding="10dp"
+                    android:text="@string/txtRegistrarLaptop"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="5dp"/>
 
-                <RadioButton
-                    android:id="@+id/radiobutton_negro"
-                    android:layout_width="wrap_content"
+                <Button
+                    android:id="@+id/btn_gotolist"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="Negro"/>
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button_border_black"
+                    android:text="@string/txtListaLaptops"
+                    app:backgroundTint="@null"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="5dp"/>
 
             </LinearLayout>
 
-        </RadioGroup>
+        </LinearLayout>
 
-    </LinearLayout>
+    </ScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginBottom="15dp"
-        android:gravity="center">
-
-        <Button
-            android:id="@+id/btn_registrar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_button"
-            android:padding="10dp"
-            android:text="Registrar Laptop"
-            android:textColor="@color/white"
-            android:layout_marginEnd="5dp"/>
-
-        <Button
-            android:id="@+id/btn_gotolist"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_button_border_black"
-            android:text="Lista de laptops"
-            app:backgroundTint="@null"
-            android:padding="10dp"
-            android:textColor="@color/black"
-            android:layout_marginStart="5dp"/>
-
-    </LinearLayout>
-    
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
