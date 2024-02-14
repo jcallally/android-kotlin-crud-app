@@ -13,7 +13,7 @@ import com.google.gson.reflect.TypeToken
 
 class MainActivity : AppCompatActivity() {
 
-    val mTag = "ListaLaptops"
+    //val mTag = "ListaLaptops"
 
     private var imageViewLaptop: ImageView? = null
     private var editTextCodigo: EditText? = null
