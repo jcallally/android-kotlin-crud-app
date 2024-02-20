@@ -70,7 +70,6 @@ class LaptopsAdapter(private val context: Activity, private var laptops: ArrayLi
         almacenamientoAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         //spinnerAlmacenamientoDialog?.adapter = almacenamientoAdapter
 
-
         //Inicia el menú emergente
         val popupMenu = PopupMenu(context, view)
         popupMenu.inflate(R.menu.show_menu)
@@ -117,7 +116,7 @@ class LaptopsAdapter(private val context: Activity, private var laptops: ArrayLi
                     }
                     if (almacenamientoLaptop.contains(listLaptop.almacenamiento)){
 
-                        val posicionAlmacenamiento = marcaLaptop.indexOf(listLaptop.almacenamiento)
+                        val posicionAlmacenamiento = almacenamientoLaptop.indexOf(listLaptop.almacenamiento)
                         spinnerAlmacenamientoDialog.setSelection(posicionAlmacenamiento)
                     }
 

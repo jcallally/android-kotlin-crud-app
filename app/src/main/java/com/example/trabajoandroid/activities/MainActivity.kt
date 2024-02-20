@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
 
         init()
         listeners()
-
     }
 
     private fun init(){
@@ -79,7 +78,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun listeners(){
-
 
         radioGroupColor?.setOnCheckedChangeListener { _, checkedId ->
 

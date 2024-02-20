@@ -35,7 +35,6 @@ class ListaLaptopsRegistradas : AppCompatActivity(){
 
         init()
         listeners()
-
     }
 
     private fun init(){
@@ -72,7 +71,6 @@ class ListaLaptopsRegistradas : AppCompatActivity(){
                 filterList(newText)
                 return true
             }
-
         })
     }
 
@@ -98,7 +96,7 @@ class ListaLaptopsRegistradas : AppCompatActivity(){
 
             for (i in listLaptops){
 
-                if (i.codigo.toLowerCase(Locale.ROOT).contains(query)){
+                if (i.codigo.lowercase(Locale.ROOT).contains(query)){
 
                     filteredList.add(i)
                 }
