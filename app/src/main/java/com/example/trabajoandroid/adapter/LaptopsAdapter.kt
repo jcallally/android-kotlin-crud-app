@@ -201,7 +201,6 @@ class LaptopsAdapter(private val context: Activity, private var laptops: ArrayLi
                 }
                 else -> true
             }
-
         }
 
         popupMenu.show()
