@@ -3,6 +3,7 @@ package com.example.trabajoandroid.adapter
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
+import android.os.Build
 import android.text.Editable
 import android.view.LayoutInflater
 import android.view.View
@@ -183,20 +184,15 @@ class LaptopsAdapter(private val context: Activity, private var laptops: ArrayLi
                         .setTitle("Eliminar")
                         .setIcon(R.drawable.ic_warning)
                         .setMessage("¿Estas seguro de eliminar esta información?")
-                        .setPositiveButton("Si"){
-
-                            dialog,_->
+                        .setPositiveButton("Si"){ dialog,_->
 
                             deleteItem(position)
                             Toast.makeText(context, "Los datos se elminaron correctamente", Toast.LENGTH_SHORT).show()
                             dialog.dismiss()
 
-                        }.setNegativeButton("No"){
-
-                            dialog,_->
+                        }.setNegativeButton("No"){ dialog,_->
 
                             dialog.dismiss()
-
                         }
                         .create()
                         .show()
@@ -210,21 +206,30 @@ class LaptopsAdapter(private val context: Activity, private var laptops: ArrayLi
 
         popupMenu.show()
 
-        //CONFIGURACIÓN PARA MOSTRAR ICONOS (Editar, Eliminar) EN EL MENÚ EMERGENTE
+        //CONFIGURACIÓN PARA MOSTRAR ICONOS (Editar, Eliminar) EN EL MENÚ EMERGENTE (All vesions)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
 
-        // 1. Obtiene el campo "mPopup" de la clase PopupMenu mediante reflexión.
-        val popup = PopupMenu::class.java.getDeclaredField("mPopup")
+            try {
 
-        // 2. Hace que el campo "mPopup" sea accesible, incluso si es privado.
-        popup.isAccessible = true
+                // 1. Obtiene el campo "mPopup" de la clase PopupMenu mediante reflexión.
+                val popup = PopupMenu::class.java.getDeclaredField("mPopup")
 
-        // 3. Obtiene el valor del campo "mPopup" para el objeto PopupMenu proporcionado.
-        val menu = popup.get(popupMenu)
+                // 2. Hace que el campo "mPopup" sea accesible, incluso si es privado.
+                popup.isAccessible = true
 
-        // 4. Utilizando reflexión, obtiene el método "setForceShowIcon" de la clase del menú.
-        //    Este método, si está presente, permite mostrar iconos en el menú incluso si no se hace de forma predeterminada.
-        //    Invoca el método "setForceShowIcon" y establece su argumento en true para forzar la visualización de iconos.
-        menu.javaClass.getDeclaredMethod("setForceShowIcon", Boolean::class.java).invoke(menu, true)
+                // 3. Obtiene el valor del campo "mPopup" para el objeto PopupMenu proporcionado.
+                val menu = popup.get(popupMenu)
+
+                // 4. Utilizando reflexión, obtiene el método "setForceShowIcon" de la clase del menú.
+                //    Este método, si está presente, permite mostrar iconos en el menú incluso si no se hace de forma predeterminada.
+                //    Invoca el método "setForceShowIcon" y establece su argumento en true para forzar la visualización de iconos.
+                menu.javaClass.getDeclaredMethod("setForceShowIcon", Boolean::class.java).invoke(menu, true)
+
+            } catch (e: Exception) {
+
+                e.printStackTrace()
+            }
+        }
     }
 
     private fun deleteItem(position: Int){
