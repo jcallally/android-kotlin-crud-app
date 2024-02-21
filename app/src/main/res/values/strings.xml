@@ -10,6 +10,6 @@
     <string name="txtPrecio">Precio</string>
     <string name="txtPlateado">Plateado</string>
     <string name="txtNegro">Negro</string>
-    <string name="txtRegistrarLaptop">Registrar Laptop</string>
-    <string name="txtListaLaptops">Lista de laptops</string>
+    <string name="txtRegistrarLaptop">Registrar </string>
+    <string name="txtListaLaptops">Ver lista</string>
 </resources>
