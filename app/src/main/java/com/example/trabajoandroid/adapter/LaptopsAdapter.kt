@@ -121,7 +121,8 @@ class LaptopsAdapter(private val context: Activity, private var laptops: ArrayLi
                         spinnerAlmacenamientoDialog.setSelection(posicionAlmacenamiento)
                     }
 
-                    editTextPrecioDialog.text = Editable.Factory.getInstance().newEditable(listLaptop.precio.toString())
+                    formatPrice = String.format("%.2f", listLaptop.precio)
+                    editTextPrecioDialog.text = Editable.Factory.getInstance().newEditable(formatPrice)
 
                     when (listLaptop.color) {
 
