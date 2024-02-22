@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CrudApp</string>
+    <string name="app_name">crudApp</string>
     <string name="ImageDescription">Laptop</string>
     <string name="txtCode">Código</string>
     <string name="txtDescription">Descripción</string>
