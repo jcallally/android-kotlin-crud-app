@@ -121,6 +121,7 @@ class LaptopsAdapter(private val context: Activity, private var laptops: ArrayLi
                         spinnerAlmacenamientoDialog.setSelection(posicionAlmacenamiento)
                     }
 
+                    //Muestra el precio con dos decimales y coma como separador decimal (2500,00).
                     formatPrice = String.format("%.2f", listLaptop.precio)
                     editTextPrecioDialog.text = Editable.Factory.getInstance().newEditable(formatPrice)
 
@@ -158,8 +159,11 @@ class LaptopsAdapter(private val context: Activity, private var laptops: ArrayLi
                             listLaptop.marca = spinnerMarcaDialog.selectedItem.toString()
                             listLaptop.ram = spinnerRamDialog.selectedItem.toString()
                             listLaptop.almacenamiento = spinnerAlmacenamientoDialog.selectedItem.toString()
-                            val preString = editTextPrecioDialog.text.toString()
-                            listLaptop.precio = preString.toDouble()
+
+                            val preString = editTextPrecioDialog.text.toString() //Precio de la laptop en el AlertDialog (2500,00).
+                            val preStringFormatted = preString.replace(",", ".") // Reemplazar la coma por un punto (2500,00 por 2500.00).
+                            listLaptop.precio = preStringFormatted.toDouble() // El método toDouble() espera un formato que utilice un punto como separador decimal.
+
                             val colorId = radioGroupColorDialog.checkedRadioButtonId
                             listLaptop.color = if (colorId == R.id.radiobutton_plateado_dialog) "Plateado" else "Negro"
 
