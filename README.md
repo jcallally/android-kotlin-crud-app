@@ -8,7 +8,7 @@
 ## Descripción
 
 >[!NOTE]
-> Este proyecto de Android Studio desarrollado en Kotlin permite el ingreso de información de laptops a través de un formulario, con la capacidad de listar, editar y eliminar registros, así como buscar registros específicos.
+> Este proyecto de Android Studio desarrollado en Kotlin permite el ingreso de información de laptops a través de un formulario, con la capacidad de listar, editar y eliminar registros, así como buscar registros específicos. Además, incluye características como almacenamiento local utilizando SharedPreferences, navegación entre pantallas, uso de RecyclerView y CardView, implementación de SearchView y PopupMenu, entre otros. Las tecnologías utilizadas incluyen Kotlin, Android SDK y la biblioteca Gson para la serialización de datos.
 
 ## Capturas de Pantalla
 
