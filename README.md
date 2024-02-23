@@ -15,8 +15,21 @@
 >[!NOTE]
 > Visualiza a continuación algunas capturas de pantalla de la interfaz de usuario de la aplicación en acción.
 >
-><br>
+> <br>
 >
+> | Registrar | Buscar | Editar | Eliminar |
+> |----------|----------|----------|----------|
+> | <img src="https://i.imgur.com/8h4iVNc.gif" alt="Registrar" width="210px"> | <img src="https://i.imgur.com/BE362L2.gif" alt="Buscar" width="210px"> | <img src="https://i.imgur.com/NIhRi5r.gif" alt="Editar" width="210px"> | <img src="https://i.imgur.com/NTT3HZ1.gif" alt="Eliminar" width="210px"> |
+
+<!-- Moestrar imágenes en su tamaño original
+![Registrar](https://i.imgur.com/8h4iVNc.gif)
+![Buscar](https://i.imgur.com/BE362L2.gif) 
+![Editar](https://i.imgur.com/NIhRi5r.gif) 
+![Eliminar](https://i.imgur.com/NTT3HZ1.gif)
+
+------------------------------------------------------------------->
+
+<!-- Mostrar imágenes en la tabla expandidas a todo el ancho de la pantalla
 > | Registrar | Buscar | Editar | Eliminar |
 > |----------|----------|----------|----------|
 > | ![Registrar][1] | ![Buscar][2] | ![Editar][3] | ![Eliminar][4] |
@@ -24,21 +37,19 @@
 [1]: https://i.imgur.com/8h4iVNc.gif
 [2]: https://i.imgur.com/BE362L2.gif
 [3]: https://i.imgur.com/NIhRi5r.gif
-[4]: https://i.imgur.com/NTT3HZ1.gif
+[4]: https://i.imgur.com/NTT3HZ1.gif 
 
-<!-- Muestrar imágenes apiladas de forma horizontal y tamaño editado
+------------------------------------------------------------------->
+
+<!-- Moestrar imágenes apiladas de forma horizontal y tamaño editado
 <div style="display: flex;">
     <img src="https://i.imgur.com/8h4iVNc.gif" alt="Registrar" width="200px">
     <img src="https://i.imgur.com/BE362L2.gif" alt="Buscar" width="200px">
     <img src="https://i.imgur.com/NIhRi5r.gif" alt="Editar" width="200px">
     <img src="https://i.imgur.com/NTT3HZ1.gif" alt="Eliminar" width="200px">
-</div> -->
+</div> 
 
-<!-- Muestrar imágenes en su tamaño original
-![Registrar](https://i.imgur.com/8h4iVNc.gif)
-![Buscar](https://i.imgur.com/BE362L2.gif) 
-![Editar](https://i.imgur.com/NIhRi5r.gif) 
-![Eliminar](https://i.imgur.com/NTT3HZ1.gif) -->
+------------------------------------------------------------------->
 
 ## Características
 
