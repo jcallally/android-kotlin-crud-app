@@ -19,7 +19,7 @@
 >
 > | Registrar | Buscar | Editar | Eliminar |
 > |----------|----------|----------|----------|
-> | <img src="https://i.imgur.com/8h4iVNc.gif" alt="Registrar" width="200px"> | <img src="https://i.imgur.com/BE362L2.gif" alt="Buscar" width="200px"> | <img src="https://i.imgur.com/NIhRi5r.gif" alt="Editar" width="200px"> | <img src="https://i.imgur.com/NTT3HZ1.gif" alt="Eliminar" width="200px"> |
+> | <img src="https://i.imgur.com/8h4iVNc.gif" alt="Registrar" width="180px"> | <img src="https://i.imgur.com/BE362L2.gif" alt="Buscar" width="180px"> | <img src="https://i.imgur.com/NIhRi5r.gif" alt="Editar" width="180px"> | <img src="https://i.imgur.com/NTT3HZ1.gif" alt="Eliminar" width="180px"> |
 
 <!-- Moestrar imágenes en su tamaño original
 ![Registrar](https://i.imgur.com/8h4iVNc.gif)
